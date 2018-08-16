@@ -1,0 +1,50 @@
+{
+  "pages":[
+    "pages/word/word",
+    "pages/girl/index",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/joke/joke",
+    "pages/test/test",
+    "pages/detail/detail"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "希望塔",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#dddddd",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "gray",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/girl/index",
+        "text": "美女",
+        "iconPath": "images/tabBar/tabBar_me_icon.png",
+        "selectedIconPath": "images/tabBar/tabBar_me_click_icon.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "图片",
+        "iconPath": "images/tabBar/tabBar_essence_icon.png",
+        "selectedIconPath": "images/tabBar/tabBar_essence_click_icon.png"
+      },
+      {
+        "pagePath": "pages/word/word",
+        "text": "笑话",
+        "iconPath": "images/tabBar/tabBar_new_icon.png",
+        "selectedIconPath": "images/tabBar/tabBar_new_click_icon.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 3000,
+    "connectSocket": 3000,
+    "uploadFile": 3000,
+    "downloadFile": 3000
+  },
+  "debug": false
+}

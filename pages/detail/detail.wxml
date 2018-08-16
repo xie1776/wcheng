@@ -1,0 +1,19 @@
+<!--home.xml-->
+ <view style='font-size:20px;text-align:center;border-bottom:1px solid black;margin-bottom:20px;' data-title="{{info.title}}">
+    <text>搞笑图片</text>
+</view> 
+
+
+    <view class="news-item" data-title="{{info.title}}" style="margin-bottom:22px;padding-top:8px;">
+      <view class="news-text" style='text-align:center;margin-bottom:16px;'>
+         <text class="news-title" style='font-size:18px;font-weight:500;padding-bottom:8px;'>{{info.title}}</text> 
+        <view class="news-stamp" style='font-size:12px;color:#E5E5E5;margin-top:8px;border-bottom:1px solid #DEDEDE;width:100%;'>
+            <text style='margin-right:15px;'>作者：admin</text>
+            <text>时间：{{info.ct}}</text>
+        </view>
+      </view>
+      <view>
+        <image class="list-image" src="{{info.img}}" mode="widthFix" style='width:100%;'/>
+      </view>
+    </view>
+

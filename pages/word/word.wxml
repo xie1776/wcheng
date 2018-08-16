@@ -1,0 +1,20 @@
+<!--home.xml-->
+ <view style='font-size:20px;text-align:center;border-bottom:1px solid black;'>
+    <text>笑话大全</text>
+</view> 
+<view class="container" style="margin:8px;">
+  <block wx:for="{{jokeList}}" >
+    <view class="news-item" data-title="{{item.title}}" data-url="{{item.url}}" bindtap="bindViewTap" style="margin-bottom:22px;border-top:1px solid #DEDEDE;padding-top:8px;">
+      <view class="news-text" style='text-align:center;'>
+         <text class="news-title" style='font-size:18px;font-weight:500;'>{{item.title}}</text> 
+        <view class="news-stamp" style='font-size:12px;color:#E5E5E5;'>
+            <text style='margin-right:15px;'>作者：admin</text>
+            <text>时间：{{item.ct}}</text>
+        </view>
+      </view>
+      <view style='margin-top:8px;text-indent:2em;font-family:楷体;'>
+        <text>{{item.content}}</text>
+      </view>
+    </view>
+  </block>
+</view>
