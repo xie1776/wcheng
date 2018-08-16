@@ -3,9 +3,10 @@ var md5 = require('../../utils/md5.js');
 
 //请求数据
 var list = [];
+var app = getApp()
 function getJokeList(that,p=1){
   wx.request({
-    url: md5.sign('https://api.xwta.net/Joke/getListByImg'),
+    url: md5.sign(app.globalData.serverUrl +'/Joke/getListByImg'),
     data: {
       p: p
     },
@@ -31,7 +32,7 @@ function getJokeList(that,p=1){
 }
 
 var  p = 1
-var app = getApp()
+
 Page({
   data: {
     motto: 'Hello World',

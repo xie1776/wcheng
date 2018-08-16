@@ -7,7 +7,7 @@ Page({
     var that = this
     console.log(option.id);
     wx.request({
-      url: md5.sign('https://api.xwta.net/Joke/getDetailImg'),
+      url: md5.sign('https://dwto.99meiti.com/Joke/getDetailImg'),
       data: {
         id: id
       },

@@ -35,6 +35,7 @@ App({
     }
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    serverUrl: "https://dwto.99meiti.com"
   }
 })

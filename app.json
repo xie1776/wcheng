@@ -21,12 +21,6 @@
     "backgroundColor": "#fff",
     "list": [
       {
-        "pagePath": "pages/girl/index",
-        "text": "美女",
-        "iconPath": "images/tabBar/tabBar_me_icon.png",
-        "selectedIconPath": "images/tabBar/tabBar_me_click_icon.png"
-      },
-      {
         "pagePath": "pages/index/index",
         "text": "图片",
         "iconPath": "images/tabBar/tabBar_essence_icon.png",

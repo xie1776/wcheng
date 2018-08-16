@@ -5,7 +5,7 @@ var md5 = require('../../utils/md5.js');
 var list = [];
 function getJokeList(that, p = 1) {
   wx.request({
-    url: md5.sign('https://api.xwta.net/Girl/getListByImg'),
+    url: md5.sign(app.globalData.serverUrl +'/Girl/getListByImg'),
     data: {
       p: p
     },
