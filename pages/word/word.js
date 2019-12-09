@@ -1,10 +1,11 @@
 var md5 = require('../../utils/md5.js');
+
+var app = getApp();
 //请求数据
 var list = [];
-var app = getApp()
 function getJokeList(that, p = 1) {
   wx.request({
-    url: md5.sign(app.globalData.serverUrl+'/Joke/getlistByWord'),
+    url: md5.sign(app.globalData.URL + '/api/cjoke/index.html'),
     data: {
       p: p
     },
@@ -12,22 +13,21 @@ function getJokeList(that, p = 1) {
       'contentType': 'application/json'
     },
     success: function (res) {
-      console.log(res.data)
+      // console.log(res)
       if (res.data.code) {
-
-        for (var i = 0; i < res.data.list.length; i++) {
-          list.push(res.data.list[i]);
+        for (var i = 0; i < res.data.data.length; i++) {
+          list.push(res.data.data[i]);
         }
         that.setData({
           jokeList: list
         })
       } else {
-        console.log('fail');
+        console.log('fail-joke');
       }
     }
   })
 }
-
+// console.log(list);
 var p = 1
 
 Page({
@@ -37,8 +37,6 @@ Page({
     jokeList: [],
   },
   onLoad: function () {
-    console.log('onLoad');
-    console.log(app.globalData);
     var that = this
     //调用应用实例的方法获取全局数据
     app.getUserInfo(function (userInfo) {

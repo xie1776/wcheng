@@ -1,23 +1,23 @@
 {
-  "pages":[
+  "pages": [
     "pages/word/word",
-    "pages/girl/index",
     "pages/index/index",
     "pages/logs/logs",
     "pages/joke/joke",
     "pages/test/test",
-    "pages/detail/detail"
+    "pages/detail/detail",
+    "pages/user/user"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "希望塔",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "color": "#dddddd",
     "selectedColor": "#3cc51f",
-    "borderStyle": "gray",
+    "borderStyle": "white",
     "backgroundColor": "#fff",
     "list": [
       {
@@ -31,6 +31,12 @@
         "text": "笑话",
         "iconPath": "images/tabBar/tabBar_new_icon.png",
         "selectedIconPath": "images/tabBar/tabBar_new_click_icon.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "images/tabBar/tabBar_me_icon.png",
+        "selectedIconPath": "images/tabBar/tabBar_me_click_icon.png"
       }
     ]
   },
@@ -40,5 +46,6 @@
     "uploadFile": 3000,
     "downloadFile": 3000
   },
-  "debug": false
+  "debug": false,
+  "sitemapLocation": "sitemap.json"
 }

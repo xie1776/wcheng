@@ -1,14 +1,14 @@
 
 var md5 = require('../../utils/md5.js');
-
+var app = getApp();
 //请求数据
 var list = [];
-var app = getApp()
 function getJokeList(that,p=1){
   wx.request({
-    url: md5.sign(app.globalData.serverUrl +'/Joke/getListByImg'),
+    url: md5.sign(app.globalData.URL +'/api/cjoke/index.html'),
     data: {
-      p: p
+      p: p,
+      type:2
     },
     header: {
       'contentType': 'application/json'
@@ -16,9 +16,8 @@ function getJokeList(that,p=1){
     success: function (res) {
       console.log(res.data)
       if (res.data.code) {
-  
-        for (var i = 0; i < res.data.list.length; i++) {
-          list.push(res.data.list[i]);
+        for (var i = 0; i < res.data.data.length; i++) {
+          list.push(res.data.data[i]);
         }
         that.setData({
           jokeList: list
@@ -32,7 +31,7 @@ function getJokeList(that,p=1){
 }
 
 var  p = 1
-
+var app = getApp()
 Page({
   data: {
     motto: 'Hello World',

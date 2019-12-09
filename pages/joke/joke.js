@@ -1,13 +1,14 @@
 
 var md5 = require('../../utils/md5.js');
-
+var app = getApp();
 //请求数据
 var list = [];
 function getJokeList(that,p=1){
   wx.request({
-    url: md5.sign(app.globalData.serverUrl +'/Joke/getListByImg'),
+    url: md5.sign(app.globalData.URL +'/api/cjoke/index.html'),
     data: {
-      p: p
+      p: p,
+      type:2
     },
     header: {
       'contentType': 'application/json'

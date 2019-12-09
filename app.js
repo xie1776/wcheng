@@ -1,5 +1,14 @@
 //app.js
+
+var is_dev = true;
 App({
+  //设置全局请求URL
+  globalData: {
+    URL: is_dev ? 'http://dev.ttkan.cn':'https://www.ttkan.cn',
+    userInfo: null,
+  },
+
+
   onLaunch: function () {
     //调用API从本地缓存中获取数据
     var logs = wx.getStorageSync('logs') || []
@@ -33,9 +42,5 @@ App({
       //   }
       // })
     }
-  },
-  globalData: {
-    userInfo: null,
-    serverUrl: "https://dwto.99meiti.com"
   }
 })
