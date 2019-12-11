@@ -43,7 +43,7 @@ Page({
                 that.loadUserInfo();
                 that.setData({ //设置变量
                   hasUserInfo: false,
-                  userInfo:res.data.userInfo,
+                  // userInfo:res.data.userInfo,
                 });
               }
             },
@@ -64,11 +64,11 @@ Page({
           console.log("wx获得用户信息:", res);
           var data = {
             "openid": openid,
-            "user": res.data.userInfo
+            'user':res.userInfo,
           }
           //发送信息给服务器获得用户信息
           wx.request({
-            url: app.globalData.userInterfaceUrl + 'login',
+            url: app.globalData.URL + '/api/clogin/update.html',  //更新用户信息
             dataType: "json",
             method: "POST",
             data: data,
@@ -114,22 +114,3 @@ Page({
     that.loadUserInfo();
   }
 })
-
-function oauth()
-{
-  wx.login({
-    success(res) {
-      if (res.code) {
-        //发起网络请求
-        wx.request({
-          url: app.globalData.URL +'/api/clogin/index.html',
-          data: {
-            code: res.code
-          }
-        })
-      } else {
-        console.log('登录失败！' + res.errMsg)
-      }
-    }
-  })
-}
